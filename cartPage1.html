@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     *{
+            font-family:  sans-serif;
+        }
+#cart_Verify{
+    background-color:rgb(223,30,46) ;
+    text-align: center;
+    height: 27px;
+    margin: auto;
+    /* position:sticky ;
+    bottom:0 */     
+}
+#cart_Verify>p{
+        padding-top: 5px;
+        color: white;
+        
+      }
+#cart_container{
+    width: 70%;
+    height: auto;
+    display: flex;
+    margin: auto;
+    margin-top:50px;
+
+}
+
+#cart_right{
+    width: 25%;
+    height: auto;
+    margin-left: 5%;
+}
+#cart_right>input{
+    border:none;
+    border-bottom: 1px solid;
+}
+hr{
+    vertical-align: auto;
+}
+#right_first{
+
+    display: flex;
+    justify-content: space-between;
+}
+#right_total{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 800;
+}
+#couponcodeoffer>input{
+    border: none;
+    border-bottom: 1px solid;
+    width: 90%;
+    
+}
+#couponcodeoffer>button{
+background-color: rgb(192, 28, 28);
+padding-left: 5%;
+padding-right: 5%;
+padding-top: 2%;
+padding-bottom: 2%;
+border: none;
+border-radius: 5px;
+color: white;
+}
+#checkout{
+    width: 75%;
+    height: 35px;
+    margin-left: 10%;
+}
+#offer{
+    width: 25%;
+    height: 30px;
+}
+#cart_left{
+    margin-right: 2%;
+    margin-top: 100px;
+    /* display: flex; */
+    /* border: 1px solid red; */
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap:3%;
+    height: auto;
+}
+#cart_left>div{
+
+    display: flex;
+}
+#cart_left>div>h2{
+    margin-left: 20px;
+}
+#cart_left>div>img{
+    width: 25%;
+    height: 70px;
+}
+.cart_price{
+    text-decoration: line-through;
+    margin-left:20px;
+}
+#payment_final{
+            width: 100%;
+            height: 100%;
+           
+            position: absolute;
+            top: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            border: 1px solid black;
+        }
+        #payvia{
+        display: grid;
+        grid-template-columns: repeat(2,250px);
+        grid-gap:2%;
+    }   
+    #payvia>div{
+    width:65%;
+    border: 1px solid grey;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 3px;
+    color: cyan;
+    }
+    #payment-content{
+        /* border: 1px solid red; */
+        background-color: white;
+    }
+    /* -------------------------footer------------ */
+    #footer_container{
+    width: 100%;
+    height: 500px;
+    background-color: rgb(68,100,120);
+  
+    
+}
+#footer_con{
+    display: flex;
+}
+
+#footer_left{
+    margin-left: 100px;
+    margin-top: 70px;
+}
+
+#footer_midd{
+    margin-left: 230px;
+    margin-top: 70px;
+}
+
+#footer_right{
+    margin-left: 230px;
+    margin-top: 70px;
+}
+#footer_p{
+    color: aliceblue;
+}
+#footer_h{
+    color: aliceblue;
+
+}
+#footer_dis{
+    display: flex;
+  margin-top: 20px;
+
+}
+#footer_dis >p{
+   margin-left: 70px;
+   color: white;
+
+}
+#footer_in{
+    margin-left: 550px;
+    color: white;
+}
+.fa-brands{
+     margin-right: 20px;
+}
+#icon{
+     margin-left: 130px;
+     margin-top: 100px;
+     color: white;
+     
+} 
+/* -----------------------navbar---------------------- */
+#nav_bar{
+	height: 60px;
+	width: 100%;
+	display: inline-flex;
+	justify-content: space-between;
+	margin-top: 1%;
+	/* position: fixed; */
+}
+
+  #left_box{
+	height: 50px;
+	width: 45%;
+	display: flex;
+
+  }
+  #left_box>div{
+	  height: 45px;
+	  margin: 1%;
+	  
+  }
+  #icon_img > a >img{
+	  height: 40px;
+	  
+  }
+  #right_box{
+	height: 50px;
+	width: 15%;
+	display: flex;
+	float: left;
+  }
+
+#right_box>div{
+	margin-left: 10%;
+}
+
+#sign_in>a>button{
+	background-color: rgb(216, 32, 19);
+	color: white;
+	height: 35px;
+	width: 85px;
+	margin-bottom: 10%;
+	border-radius: 6px;
+	border: none;
+	font-size: 17px;
+	font-weight: 900;
+} 
+#sign_in>a>button:hover{
+background-color: rgb(161, 4, 4);
+}
+a span{
+    margin-top: -150px;
+    font-size: large;
+}
+</style>
+<body>
+    <div id="navBarBox"></div>
+    <div id="cart_Verify">
+        <p>Please Click Here <a> VERIFY EMAIL</a> & Click Here to <a> VERIFY NUMBER </a></p>
+    </div>
+    <div id="cart_container">
+        <h1>Cart</h1>
+        <div id="cart_left">
+        </div>
+        <hr>
+        <div id="cart_right">
+            <div id="right_first">
+                <h4>Amount</h4>
+            <h4 id="final_amount"></h4>
+             </div>
+        <hr>
+        <div id="right_first">
+            <h4>CGST 9%</h4>
+            <h4 id="final_cgst"></h4>
+        </div>
+        <hr>
+        <div id="right_first">
+            <h4>SGST 9%</h4>
+            <h4 id="final_sgst"></h4>
+        </div>
+        <hr>
+        <div id="right_total">
+            <h2>Total</h2>
+            <h2 id="final_total"></h2>
+        </div>
+        <div id="couponcodeoffer">
+            <input  id="couponcode" type="text" placeholder="Coupon Code">
+            <br>
+            <button id="offer">GO</button>
+            <br>
+            <br>
+            <button id="checkout" onclick="checkout()">CHECKOUT</button>
+        </div>
+        </div>
+    </div>
+    <div id="payment_final">
+        <div id="payment-content">
+            <h1>Pay Via</h1>
+            <div id="payvia">
+                <div id="close">CREDIT CARD</div>
+        
+                <div onclick="card_payment()">DEBIT CARD</div>
+                <div>NET BANKING</div>
+                <div>PAYTM</div>
+                <div>UPI</div>
+                <div>EMI (CREDIT CARD)</div>
+            </div>
+        </div>
+    </div>
+    <div id="footer_container">
+    </div>
+</body>
+</html>
+<script type="module">
+
+import navBar from "./navBar.js"
+ 
+   
+ let navBarBox = document.getElementById("navBarBox");
+ 
+ navBarBox.innerHTML = navBar();
+
+
+import footer from "./footer.js"
+
+var foot = document.getElementById("footer_container")
+foot.innerHTML=footer()
+
+document.getElementById("checkout").addEventListener("click",function(){
+        document.getElementById("payment_final").style.display = "flex";
+    })
+
+    document.getElementById("close").addEventListener("click",function(){
+        document.getElementById("payment_final").style.display = "none";
+    })
+
+ let finalcartData=JSON.parse(localStorage.getItem("productIncart"))
+//  console.log(finalcartData)
+
+
+// ---------------right pricing div start--------------------------------
+let cart_right=document.getElementById("cart_right")
+
+let totalCost=JSON.parse(localStorage.getItem("totalCost"))
+
+let amount=document.getElementById("final_amount")
+amount.innerHTML=" ₹"+totalCost;
+
+let cgst=document.getElementById("final_cgst")
+cgst.innerHTML=" ₹"+Math.ceil(totalCost*0.09);
+
+let sgst=document.getElementById("final_sgst")
+sgst.innerHTML=" ₹"+Math.ceil(totalCost*0.09);
+
+let sum=(totalCost+(2*Math.ceil(totalCost*0.09)))
+let Total=document.getElementById("final_total")
+Total.innerHTML=" ₹"+sum;
+
+document.querySelector("#offer").addEventListener("click",function(){
+        var CouponCode=document.querySelector("#couponcode").value;
+
+        if(CouponCode==="FIRSTCOURSE")
+        {
+            alert("Coupon Applied")
+            var Price_discount=Math.ceil(sum-(sum*0.3))
+            // console.log(Price_discount);
+            document.querySelector("#final_total").textContent=` ₹ ${Price_discount}`
+        }
+        else{
+            console.log(`Total is ₹ ${total}`)
+        }
+       
+    })
+// function checkout(){
+
+//     window.location.href="payment.html"
+// }
+
+// ---------------left cart div-------------
+
+let cart_left=document.getElementById("cart_left")
+// let left_image=document.getElementById("left_image")
+for ( var key in finalcartData ){
+
+ let position=finalcartData[key];
+    // console.log(position.image)
+
+   let div=document.createElement("div")
+
+    let images=document.createElement("img")
+    images.src=position.images
+   images.setAttribute("class","cartimage")
+//    let imagesdiv=left_image.append(images)
+
+    let title=document.createElement("h2")
+    title.innerHTML=position.title
+   
+
+
+    let strikethrough_Price=document.createElement("p")
+    strikethrough_Price.innerHTML=position.strikethrough_Price
+    strikethrough_Price.setAttribute("class","cart_price")
+
+
+    let Price=document.createElement("h1")
+    Price.innerHTML=position.Price
+    Price.style.marginBottom="100px"
+    
+
+div.append(images,title,strikethrough_Price,Price)
+
+cart_left.append(div)
+
+
+
+
+
+    // let strikethrough_Price= left_image.append(strikethrough_Price)
+// cart_left.append(imagesdiv,titlediv)
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+// finalcartData.forEach(function(el){
+
+    // let amount=document.getElementById("final_amount")
+    // amount.innerHTML=el.Price
+    
+    // cart_right.append(amount)
+    // })
+    // for (const item in finalcartData) {
+    //   console.log(finalcartData[item])
+        
+    //   let amount=document.getElementById("final_amount")
+    //   let price=finalcartData[item].Price;
+    //   let quantity=finalcartData[item].incart;
+    //   console.log(price*quantity)
+    
+    // var totalprice = finalcartData[item].reduce(function(acc,cv){
+    //     return acc+Number(cv.price)
+    // },0);
+    
+    // console.log(totalprice)
+        // amount.innerHTML=(finalcartData[item].Price)*(finalcartData[item].incart);
+        // console.log(amount)
+    // } -->
+    
+    
