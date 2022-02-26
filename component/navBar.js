@@ -1,7 +1,7 @@
 function navBar(){
     var  navbar =`<div id="nav_bar">
         <div id="left_box">
-            <div><a href="sidebar.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z"/></svg></a></div>
+            <div  id="sliding" ><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z"/></svg></div>
             <div id="icon_img"><a href="#">
                 <img src="https://assets.interntheory.com/creative/logo.png"></a>
             </div>
