@@ -16,14 +16,14 @@ function sideBar(){
         <hr>
         <li id="ul2" ><i class="fa-solid fa-bars-staggered"></i>Register<i class="fa-solid fa-caret-down"></i>
             <ul id="ul-2">
-                <li><a href="">Company</a></li>
-                <li><a href="">Student</a></li>
+                <li><a href="companyreg.html">Company</a></li>
+                <li><a href="studentregs.html">Student</a></li>
             </ul>
         </li>
         <li id="ul3" ><i class="fa-solid fa-arrow-right-to-bracket"></i>Login<i class="fa-solid fa-caret-down"></i>
             <ul id="ul-3">
-                <li><a href="">Company</a></li>
-                <li><a href="">Student</a></li>
+                <li><a href="student and company login.html">Company</a></li>
+                <li><a href="student and company login.html">Student</a></li>
             </ul>
         </li>
 
