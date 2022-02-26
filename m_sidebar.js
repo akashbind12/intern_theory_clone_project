@@ -2,7 +2,7 @@ function sideBar(){
     var  sidebar =` <div id="side_bar">
     <div class="text"><i id="sliding2" class="fa-solid fa-bars"></i><img id="im" src="https://assets.interntheory.com/creative/logo.png" alt=""></div>
     <ul id="ul" >
-        <li><i class="fa-solid fa-house"></i></i><a href="">Home</a></li>
+        <li><i class="fa-solid fa-house"></i></i><a href="index.html">Home</a></li>
         <li><i class="fa-solid fa-bars"></i><a href="internship.html">Internships</a></li>
         <li><i class="fa-solid fa-suitcase"></i><a href="jobs.html">Jobs</a></li>
         <li><i class="fa-solid fa-plus"></i><a href="">Post Internship</a></li>
