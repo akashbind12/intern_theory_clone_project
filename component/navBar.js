@@ -15,7 +15,7 @@ function navBar(){
                 </a>
             </div>
             <div id="sign_in">
-                <a href="#">
+                <a href="student and company login.html">
                 <button>SIGN IN</button>
             </a>
             </div>
