@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/833a729023.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style/m_sidebar2.css">
 </head>
 <style>
@@ -108,15 +109,15 @@ color: white;
 }
 #payment_final{
             width: 100%;
-            height: 100%;
-           
+            height: 100%;         
             position: absolute;
             top: 0;
             display: none;
             justify-content: center;
             align-items: center;
             margin: auto;
-            border: 1px solid black;
+            /* border: 1px solid black; */
+            background-color: rgba(0,0,0,0.1);
         }
         #payvia{
         display: grid;
@@ -130,17 +131,27 @@ color: white;
     margin-bottom: 10px;
     text-align: center;
     padding: 3px;
-    color: cyan;
+    color: #5DADE2 ;
+    border: 1px solid #5DADE2 ;
+    border-radius: 4px;
     }
+    #payvia>div:hover{
+    background-color: #D6EAF8 ;
+    }
+
     #payment-content{
         /* border: 1px solid red; */
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
         background-color: white;
+        padding: 30px;
+        border-radius: 4px;
     }
     /* -------------------------footer------------ */
     #footer_container{
     width: 100%;
     height: 500px;
     background-color: rgb(68,100,120);
+    margin-top: 20px;
   
     
 }
@@ -249,7 +260,11 @@ a span{
 </style>
 <body>
     <div id="navBarBox"></div>
+    
+     <!-- ---------------sidebar.html-------------------- -->
+     <div id="sidebar_div" ></div>
 
+     <!-- ---------------homepage.html-------------------- --> 
     
     <div id="cart_Verify">
         <p>Please Click Here <a> VERIFY EMAIL</a> & Click Here to <a> VERIFY NUMBER </a></p>
@@ -289,6 +304,9 @@ a span{
         </div>
         </div>
     </div>
+
+     <!-- ---------------pay_via.html-------------------- --> 
+
     <div id="payment_final">
         <div id="payment-content">
             <h1>Pay Via</h1>
@@ -303,22 +321,111 @@ a span{
             </div>
         </div>
     </div>
-    <div id="footer_container">
-    </div>
+
+      <!-- ---------------footer.html-------------------- --> 
+    <div id="footer_container">  </div>
 </body>
 </html>
+
 <script type="module">
 
- 
-
-
-import navBar from "./navBar.js"
+//  <!-- ---------------navbar.js-------------------- --> 
+  
+import navBar from "./component/navBar.js"
  
    
  let navBarBox = document.getElementById("navBarBox");
  
  navBarBox.innerHTML = navBar();
 
+
+//  <!-- ---------------sidebar.js-------------------- --> 
+
+ import sideBar from "./script/m_sidebar2.js"
+    
+    let sidebar_box = document.getElementById("sidebar_div");
+    console.log(sidebar_box)
+    sidebar_box.innerHTML = sideBar();
+
+
+    document.querySelector("#sliding").addEventListener("click",sliding_function)
+
+    function sliding_function(){
+    let sliding_sidebar = document.getElementById("side_bar")
+    sliding_sidebar.style.left = "0";
+    sliding_sidebar.style.background = "white";
+     }
+    
+     document.querySelector("#sliding2").addEventListener("click",sliding_function2)
+
+    function sliding_function2(){
+    let sliding_sidebar = document.getElementById("side_bar")
+    sliding_sidebar.style.left = "-320px";
+     }
+    
+    //  document.querySelector("#main_div").addEventListener("click",sliding_function3)
+
+    // function sliding_function3(){
+    //     console.log("OK")
+    // let sliding_sidebar = document.getElementById("side_bar")
+    // sliding_sidebar.style.left = "-320px";
+    //  }
+
+
+ // let sliding_sidebar = document.getElementById("side_bar")
+    // sliding_sidebar.style.left = "-310px";
+
+
+
+    let show = document.getElementById("ul1")
+    console.log(show)
+    show.onclick = function(){
+        let show1 = document.getElementById("ul-1")
+        console.log(show1)
+        if( show1.style.display === ''){
+            show1.style.display = "none";
+        }
+        else if( show1.style.display === "none"){  
+            show1.style.display = 'block';
+        }
+        else if( show1.style.display === "block"){  
+            show1.style.display = 'none';
+        }
+      
+    }
+    let show_2 = document.getElementById("ul2")
+    console.log(show_2)
+    show_2.onclick = function(){
+        let show2 = document.getElementById("ul-2")
+        console.log(show2)
+        if( show2.style.display === ''){
+            show2.style.display = "none";
+        }
+        else if( show2.style.display === "none"){  
+            show2.style.display = 'block';
+        }
+        else if( show2.style.display === "block"){  
+            show2.style.display = 'none';
+        }   
+    }
+
+    let show_3 = document.getElementById("ul3")
+    console.log(show_3)
+    show_3.onclick = function(){
+        let show3 = document.getElementById("ul-3")
+        console.log(show3)
+        if( show3.style.display === ''){
+            show3.style.display = "none";
+        }
+        else if( show3.style.display === "none"){  
+            show3.style.display = 'block';
+        }
+        else if( show3.style.display === "block"){  
+            show3.style.display = 'none';
+        }   
+    }
+
+//  <!-- ---------------footer.js-------------------- --> 
 
 import footer from "./footer.js"
 
