@@ -9,10 +9,10 @@ function sideBar(){
         <li id="ul1"><i class="fa-solid fa-graduation-cap"></i>Courses<i class="fa-solid fa-caret-down"></i>
             <ul id="ul-1">
                 <li><a href="onlinecourses.html">Online Courses</a></li>
-                <li><a href="">Classroom Training</a></li>
+                <li><a href="classTraining.html">Classroom Training</a></li>
             </ul>
         </li>
-        <li><i class="fa-solid fa-phone"></i><a href="">Contact Us</a></li>
+        <li><i class="fa-solid fa-phone"></i><a href="contract.html">Contact Us</a></li>
         <hr>
         <li id="ul2" ><i class="fa-solid fa-bars-staggered"></i>Register<i class="fa-solid fa-caret-down"></i>
             <ul id="ul-2">
