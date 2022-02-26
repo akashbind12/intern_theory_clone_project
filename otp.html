@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/833a729023.js" crossorigin="anonymous"></script>
+    <style>
+        #otp-page-content{
+            width: 340px;
+            height: 530px;
+            background-color: #E53935 ;
+
+        }
+        #amount>*{
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+        }
+        #amount>h3{
+            margin: 0px 0 0 15px;
+            color:white;
+            font-weight:600;
+        }
+        #amount>p:nth-child(1){
+            margin: 0 10px 0 15px;
+            color:white;
+            text-align: right;
+        }
+        #amount>p:nth-child(3){
+            margin: 0 0 0 15px;
+            color:white;
+        }
+        #amount>h2{
+            margin: 10px 0 10px 15px;
+            color:white;
+            font-weight:600;
+        }
+        #language{
+            /* border: 1px solid black; */
+            display: flex;
+            background-color: #D32F2F
+        }
+        #language>p{
+            margin: 5px 0 5px 15px;
+            color: white;
+        }
+        #card-detail{
+            /* border: 1px solid black; */
+            display: flex;
+            background-color: #FFEBEE ;
+        }
+        #card-detail>div{
+            /* border: 1px solid black; */
+            display: flex;
+            background-color: #FFEBEE ;
+            width: 50%;
+        }
+        #card-detail>div:nth-child(2){
+            justify-content: end;
+        }
+        #card-detail>div>p{
+            font-size: 15px;
+            padding: 0 10px 0 10px;
+            margin: 10px 0 10px 0;
+        }
+        #OTP{
+             /* border: 1px solid black; */
+             height: 58%;
+             background-color: white;
+             overflow: scroll;
+             overflow-x: hidden;
+        }
+        #otp-detail{
+            border-bottom: 1px solid black;
+            align-items: center;
+            width: 60%;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 15%;
+            margin-left: 20%;
+        }
+        #otp-detail>p{
+            margin: 5px 0 0 0;
+        }
+        #otp-detail>input{
+            margin: 40px 0 0 0;
+            border:none;
+        }
+        #OTP>div:nth-child(2){
+             display: flex;
+             justify-content: space-around;
+        }
+        #OTP>div:nth-child(2)>p{
+             margin: 20px 0 0 0;
+             font-size: small;
+             text-decoration: underline;
+        }
+
+        #verify>p{
+           margin-left: 40%;
+           color: white;
+        }
+
+        #otp-page{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+      
+    </style>
+</head>
+<body>
+    <button id="button">click</button>
+
+    <!---------otp page ------------>
+    <div id="otp-page">
+        <div id="otp-page-content">
+            <div id="amount">
+                <p id="close-otp-page">X</p>
+                <h3>InternTheory </h3>
+                <p>purchase Description</p>
+                <h2>₹ 18,879</h2>
+            </div>
+            <div id="language">
+                <p>English</p>
+                <p><i style="font-size: 10px;" class="fa-solid fa-angle-down"></i></p>
+            </div>
+            <div id="card-detail">
+                <div><p><i class="fa-solid fa-angle-left"></i></p>
+                    <p>Card</p></div>
+                <div><p><i class="fa-regular fa-user"></i></p>
+                    <p>+7039746800</p></div>
+            </div>
+            <div id="OTP">
+                <div id="otp-detail">
+                    <p>Enter OTP sent to</p>
+                    <p>+917039746800 to access</p>
+                    <p>Saved Cards</p>
+                    <input type="zipcode">
+                </div>
+                <div>
+                    <p>Resend OTP</p>
+                    <p>Skip Saved Cards</p>
+                </div>
+            </div>
+            <div id="verify">
+                <p>VERIFY</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    document.getElementById("button").addEventListener("click",function(){
+        document.getElementById("otp-page").style.display = "flex";
+    })
+
+    document.getElementById("close-otp-page").addEventListener("click",function(){
+        document.getElementById("otp-page").style.display = "none";
+    })
+</script>
