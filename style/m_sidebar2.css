@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 #side_bar{
-    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-top: white;
     position :fixed;
     width: 300px;
