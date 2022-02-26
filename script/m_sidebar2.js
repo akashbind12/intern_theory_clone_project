@@ -2,13 +2,13 @@ function sideBar(){
     var  sidebar =` <div id="side_bar">
     <div id="sliding2" class="text"><i class="fa-solid fa-bars"></i><img id="im" src="https://assets.interntheory.com/creative/logo.png" alt=""></div>
     <ul id="ul" >
-        <li><i class="fa-solid fa-house"></i></i><a href="">Home</a></li>
+        <li><i class="fa-solid fa-house"></i></i><a href="index.html">Home</a></li>
         <li><i class="fa-solid fa-bars"></i><a href="internship.html">Internships</a></li>
         <li><i class="fa-solid fa-suitcase"></i><a href="jobs.html">Jobs</a></li>
         <li><i class="fa-solid fa-plus"></i><a href="">Post Internship</a></li>
         <li id="ul1"><i class="fa-solid fa-graduation-cap"></i>Courses<i class="fa-solid fa-caret-down"></i>
             <ul id="ul-1">
-                <li><a href="">Online Courses</a></li>
+                <li><a href="onlinecourses.html">Online Courses</a></li>
                 <li><a href="">Classroom Training</a></li>
             </ul>
         </li>
