@@ -7,13 +7,15 @@
     <title>Document</title>
     <script src="https://kit.fontawesome.com/833a729023.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href=".\style\cardpage.css">
+    <link rel="stylesheet" href=".\style\otppage.css">
     <style>
      
     </style>
 </head>
 <body>
     
-    <button id="button">click me</button>
+    <button id="otp-button">click for otp</button>
+    <!-- <button id="card-button">click for card</button> -->
     <!-- -------------------------cardpage.html------------ -->
     <div id="card-page">
         <div id="card-page-content">
@@ -55,7 +57,7 @@
                 <div id="method">
                     <p>CARDS,UPI & MORE</p>
                 </div>
-                <div id="UPI">
+                <div class="card" id="UPI">
                <div><i style="font-size: 18px; color: #D32F2F;" class="fa-solid fa-credit-card"></i></div>
                     <p>Cards</p>
                     
@@ -86,15 +88,74 @@
     </div>
     <!-- -------------------------cardpage.html.end------------------ -->
 
+      <!---------otp page-start -------------------->
+      <div id="otp-page">
+        <div id="otp-page-content">
+            <div id="amount">
+                <p id="close-otp-page">X</p>
+                <h3>InternTheory </h3>
+                <p>purchase Description</p>
+                <h2>₹ 18,879</h2>
+            </div>
+            <div id="language">
+                <p>English</p>
+                <p><i style="font-size: 10px;" class="fa-solid fa-angle-down"></i></p>
+            </div>
+            <div id="card-detail">
+                <div><p><i class="fa-solid fa-angle-left"></i></p>
+                    <p>Card</p></div>
+                <div><p><i class="fa-regular fa-user"></i></p>
+                    <p>+7039746800</p></div>
+            </div>
+            <div id="OTP">
+                <div id="otp-detail">
+                    <p>Enter OTP sent to</p>
+                    <p>+917039746800 to access</p>
+                    <p>Saved Cards</p>
+                    <input type="zipcode">
+                </div>
+                <div>
+                    <p>Resend OTP</p>
+                    <p>Skip Saved Cards</p>
+                </div>
+            </div>
+            <div id="verify">
+                <p>VERIFY</p>
+            </div>
+        </div>
+    </div>
+<!-- -------------------------OTP-page-end--------------------- -->
+
 </body>
 </html>
 
 <script>
-    document.getElementById("button").addEventListener("click",function(){
+    // -----------------card.js---------------------------------------------------
+    document.getElementById("card-button").addEventListener("click",function(){
         document.getElementById("card-page").style.display = "flex";
     })
 
     document.getElementById("close-card-page").addEventListener("click",function(){
         document.getElementById("card-page").style.display = "none";
+    })
+
+    document.querySelector(".card").addEventListener("click",function(){
+       console.log("ok")
+        document.getElementById("card-page").style.display = "none";
+        document.getElementById("otp-page").style.display = "flex";
+
+    })
+
+    // -----------------otp.js---------------------------------------------------
+    document.getElementById("otp-button").addEventListener("click",function(){
+        document.getElementById("otp-page").style.display = "flex";
+    })
+
+    document.getElementById("close-otp-page").addEventListener("click",function(){
+        document.getElementById("otp-page").style.display = "none";
+    })
+
+    document.getElementById("verify").addEventListener("click",function(){
+        window.location.href="index.html"
     })
 </script>
