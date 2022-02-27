@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InternTheory</title>
+    <link rel="stylesheet" href="./style/m_sidebar2.css">
     <link rel="stylesheet" type="text/css" href="./style/homepage.css">
     <link rel="stylesheet" href="./component/navbar.css">
     <link rel="stylesheet"
@@ -21,6 +22,11 @@
 </head>
 </head>
 <body>
+    
+    <!-- ---------------sidebar.html-------------------- -->
+    <div id="sidebar_div" ></div>
+
+     <!-- ---------------homepage.html-------------------- --> 
 <div class="container">
     <div id="navBarBox"></div>
     <!-- <div id="nav_bar">
@@ -211,13 +217,13 @@
         
         </a>
 
-        <a href="#">
-            <div class="exp_boxes">
-            <img src="https://assets.interntheory.com/creative/home-internships/BD.jpg" alt="">
+        <a href="internship.html">
+            <div onclick="window.location.href='boot.html'" class="exp_boxes">
+            <img  src="https://assets.interntheory.com/creative/home-internships/BD.jpg" alt="">
         </div>
         </a>
 
-        <a href="#"><div class="exp_boxes">
+        <a href="#"><div  class="exp_boxes">
             <img src="https://assets.interntheory.com/creative/home-internships/Content-Writing.jpg" alt="">
 
         </div>
@@ -251,7 +257,7 @@
 
 <div class="about_skilling">
      <div class="skillings">
-      <div class="skillings_img">
+      <div   onclick="window.location.href='boot.html'" class="skillings_img">
        <img src="https://assets.interntheory.com/creative/home-courses/Homepage-digital.jpg" alt="">  
     </div>
     <div class="skillings_img">
@@ -277,21 +283,21 @@
     <div class="slider">
         <div class="slider-items">
             <div  class="item active">
-               <img src="img/slide1.jpg" />
+               <img src=".\InternTheory\img\slide1.jpg" />
               
             </div>
             <div  class="item">
-               <img src="img/slide2.jpg" />
+               <img src=".\InternTheory\img\slide2.jpg" />
                
             </div>
             <div  class="item">
-               <img src="img/slide3.jpg" />
+               <img src=".\InternTheory\img\slide3.jpg" />
               
             </div>
     
         </div>
           <!-- slider controls -->
-            <div class="left-slide"><</div>
+            <div class="left-slide"></div>
             <div class="right-slide">></div>
           <!-- slider controls -->
      </div>
@@ -371,6 +377,96 @@
    let navBarBox = document.getElementById("navBarBox");
    
    navBarBox.innerHTML = navBar();
+
+
+   
+// --------slidebar.js-------------------------------------------
+   
+import sideBar from "./script/m_sidebar2.js"
+    
+    let sidebar_box = document.getElementById("sidebar_div");
+    console.log(sidebar_box)
+    sidebar_box.innerHTML = sideBar();
+
+
+    document.querySelector("#sliding").addEventListener("click",sliding_function)
+
+    function sliding_function(){
+    let sliding_sidebar = document.getElementById("side_bar")
+    sliding_sidebar.style.left = "0";
+    sliding_sidebar.style.background = "white";
+     }
+    
+     document.querySelector("#sliding2").addEventListener("click",sliding_function2)
+
+    function sliding_function2(){
+    let sliding_sidebar = document.getElementById("side_bar")
+    sliding_sidebar.style.left = "-320px";
+     }
+    
+    //  document.querySelector("#main_div").addEventListener("click",sliding_function3)
+
+    // function sliding_function3(){
+    //     console.log("OK")
+    // let sliding_sidebar = document.getElementById("side_bar")
+    // sliding_sidebar.style.left = "-320px";
+    //  }
+
+
+ // let sliding_sidebar = document.getElementById("side_bar")
+    // sliding_sidebar.style.left = "-310px";
+
+
+
+    let show = document.getElementById("ul1")
+    console.log(show)
+    show.onclick = function(){
+        let show1 = document.getElementById("ul-1")
+        console.log(show1)
+        if( show1.style.display === ''){
+            show1.style.display = "none";
+        }
+        else if( show1.style.display === "none"){  
+            show1.style.display = 'block';
+        }
+        else if( show1.style.display === "block"){  
+            show1.style.display = 'none';
+        }
+      
+    }
+    let show_2 = document.getElementById("ul2")
+    console.log(show_2)
+    show_2.onclick = function(){
+        let show2 = document.getElementById("ul-2")
+        console.log(show2)
+        if( show2.style.display === ''){
+            show2.style.display = "none";
+        }
+        else if( show2.style.display === "none"){  
+            show2.style.display = 'block';
+        }
+        else if( show2.style.display === "block"){  
+            show2.style.display = 'none';
+        }   
+    }
+
+    let show_3 = document.getElementById("ul3")
+    console.log(show_3)
+    show_3.onclick = function(){
+        let show3 = document.getElementById("ul-3")
+        console.log(show3)
+        if( show3.style.display === ''){
+            show3.style.display = "none";
+        }
+        else if( show3.style.display === "none"){  
+            show3.style.display = 'block';
+        }
+        else if( show3.style.display === "block"){  
+            show3.style.display = 'none';
+        }   
+    }
+
+  
 
 
   

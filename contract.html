@@ -5,18 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/183c191db3.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/833a729023.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/m_sidebar2.css">
     <link rel="stylesheet" href="/contact.css">
     <link rel="stylesheet" href=" /footer.css">
      
-<link rel="stylesheet" type="text/css" href="nav.css">
+<!-- <link rel="stylesheet" type="text/css" href="nav.css"> -->
+<link rel="stylesheet" href="./m_navbar.css">
      
 </head>
 <body>
     
     <div id="navBarBox"></div>
     
-    
+      <!-- ---------------sidebar.html-------------------- -->
+      <div id="sidebar_div" ></div>
+
+     <!-- ---------------contact.html-------------------- -->
      <div id="container">
          <div id="contact_left">
             <p id="contact_h">Contact</p>
@@ -54,6 +59,103 @@
 
 
 <script type="module">
+
+    //  -----------------------navbar.js---------------------
+
+import navBar from "./component/navBar.js"
+    
+    let navBarBox = document.getElementById("navBarBox");
+   //  console.log(navBarBox )
+    navBarBox.innerHTML = navBar();
+   
+    //  -----------------------sidebar.js---------------------
+   
+    import sideBar from "./script/m_sidebar2.js"
+       
+       let sidebar_box = document.getElementById("sidebar_div");
+       console.log(sidebar_box)
+       sidebar_box.innerHTML = sideBar();
+   
+   
+       document.querySelector("#sliding").addEventListener("click",sliding_function)
+   
+       function sliding_function(){
+       let sliding_sidebar = document.getElementById("side_bar")
+       sliding_sidebar.style.left = "0";
+       sliding_sidebar.style.background = "white";
+        }
+       
+        document.querySelector("#sliding2").addEventListener("click",sliding_function2)
+   
+       function sliding_function2(){
+       let sliding_sidebar = document.getElementById("side_bar")
+       sliding_sidebar.style.left = "-320px";
+        }
+       
+       //  document.querySelector("#main_div").addEventListener("click",sliding_function3)
+   
+       // function sliding_function3(){
+       //     console.log("OK")
+       // let sliding_sidebar = document.getElementById("side_bar")
+       // sliding_sidebar.style.left = "-320px";
+       //  }
+   
+   
+    // let sliding_sidebar = document.getElementById("side_bar")
+       // sliding_sidebar.style.left = "-310px";
+   
+   
+   
+       let show = document.getElementById("ul1")
+       console.log(show)
+       show.onclick = function(){
+           let show1 = document.getElementById("ul-1")
+           console.log(show1)
+           if( show1.style.display === ''){
+               show1.style.display = "none";
+           }
+           else if( show1.style.display === "none"){  
+               show1.style.display = 'block';
+           }
+           else if( show1.style.display === "block"){  
+               show1.style.display = 'none';
+           }
+         
+       }
+       let show_2 = document.getElementById("ul2")
+       console.log(show_2)
+       show_2.onclick = function(){
+           let show2 = document.getElementById("ul-2")
+           console.log(show2)
+           if( show2.style.display === ''){
+               show2.style.display = "none";
+           }
+           else if( show2.style.display === "none"){  
+               show2.style.display = 'block';
+           }
+           else if( show2.style.display === "block"){  
+               show2.style.display = 'none';
+           }   
+       }
+   
+       let show_3 = document.getElementById("ul3")
+       console.log(show_3)
+       show_3.onclick = function(){
+           let show3 = document.getElementById("ul-3")
+           console.log(show3)
+           if( show3.style.display === ''){
+               show3.style.display = "none";
+           }
+           else if( show3.style.display === "none"){  
+               show3.style.display = 'block';
+           }
+           else if( show3.style.display === "block"){  
+               show3.style.display = 'none';
+           }   
+       }
+   
+     
+   
 
 
     import footer from "/foot.js"
@@ -101,19 +203,8 @@
     }
 
 
-    
-    import navBar from "/nav.js"
-//  console.log(navBar);
-
-let navBarBox = document.getElementById("navBarBox");
-
-navBarBox.innerHTML = navBar();
-
 
      
- 
- 
-
      
     </script>
 
