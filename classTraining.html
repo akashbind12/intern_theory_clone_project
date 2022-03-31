@@ -242,7 +242,7 @@ const fetchclassroom=async()=>{
     let url=`https://coursesnewnodejs.herokuapp.com/classroom`
     try{
          var res=await fetch(url)
-        //  var data=await res.json();
+         var data=await res.json();
          appendclassroomData(data)
          console.log(data)
     }
