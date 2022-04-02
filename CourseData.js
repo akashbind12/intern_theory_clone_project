@@ -48,7 +48,7 @@ function appendOnlineData(OnlineData,main){
     // strikethrough_Price.setAttribute("class","strikethrough_Price")
 
     let Price=document.createElement("p")
-    Price.innerHTML=el.Price
+    Price.innerHTML= "₹" + " " + el.Price;
     Price.setAttribute("class","Price")
     // div2.append(strikethrough_Price,Price)
     div2.append(Price)
@@ -112,7 +112,7 @@ function appendclassroomData(classroomData,train_main){
         strikethrough_Price.setAttribute("class","strikethrough_Price")
     
         let Price=document.createElement("p")
-        Price.innerHTML=el.Price
+        Price.innerHTML= "₹" + " " + el.Price;
         Price.setAttribute("class","Price")
         div2.append(strikethrough_Price,Price)
         // div2.append(Price)
