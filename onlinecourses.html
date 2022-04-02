@@ -7,7 +7,7 @@
     <title>Document</title>
     <script src="https://kit.fontawesome.com/833a729023.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style/m_sidebar2.css">
-    <link rel="stylesheet" href="./m_navbar.css">
+    <link rel="stylesheet" href="./style/navbar.css">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -245,7 +245,7 @@
 // ]
 let main=document.getElementById("onc_main");
 
-import {appendOnlineData} from "./CourseData.js"
+import {appendOnlineData} from "./script/CourseData.js"
 
 // var data5;
 const fetchonline=async()=>{
@@ -264,6 +264,8 @@ const fetchonline=async()=>{
   fetchonline();
 
 
+
+  // --------navbar.js-------------------------------------------
 
 import navBar from "./component/navBar.js"
  
@@ -366,7 +368,8 @@ import sideBar from "./script/m_sidebar2.js"
 
 
 // .......................footer.js............
-import footer from "./footer.js"
+
+import footer from "./component/footer.js"    
 
 var foot = document.getElementById("footer_container")
 foot.innerHTML=footer()

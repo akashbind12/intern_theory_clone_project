@@ -7,7 +7,7 @@
     <title>Document</title>
     <script src="https://kit.fontawesome.com/833a729023.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style/m_sidebar2.css">
-    <link rel="stylesheet" href="./m_navbar.css">
+    <link rel="stylesheet" href="./style/navbar.css">
     <link rel="stylesheet" href=".\style\cardpage.css">
     <link rel="stylesheet" href=".\style\otppage.css">
 </head>
@@ -490,10 +490,13 @@ import navBar from "./component/navBar.js"
 
 //  <!-- ---------------footer.js-------------------- --> 
 
-import footer from "./footer.js"
+import footer from "./component/footer.js"    
 
 var foot = document.getElementById("footer_container")
 foot.innerHTML=footer()
+
+
+//  <!-- ---------------cartpage.js-------------------- --> 
 
 document.getElementById("checkout").addEventListener("click",function(){
         document.getElementById("payment_final").style.display = "flex";
