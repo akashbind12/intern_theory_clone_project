@@ -100,7 +100,7 @@ let show_3 = document.getElementById("ul3")
         }
         if (loginSuccss) {
             alert("login Success");
-             window.location.href = "profile.html"
+             window.location.href = "index.html"
         }
         else {
             alert("invalid details");
@@ -182,7 +182,7 @@ let show_3 = document.getElementById("ul3")
             }
             if (loginSuccss) {
                 alert("login Success");
-                 window.location.href = "profile.html"
+                 window.location.href = "index.html"
             }
             else {
                 alert("invalid details");
@@ -226,7 +226,7 @@ let show_3 = document.getElementById("ul3")
             }
             if (loginSuccss) {
                 alert("login Success");
-                  window.location.href = "profile.html"
+                  window.location.href = "index.html"
             }
             else {
                 alert("invalid details");
