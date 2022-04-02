@@ -1,7 +1,4 @@
 
-
-
-
 function appendOnlineData(OnlineData,main){
 
     OnlineData.forEach(function(el){
@@ -46,14 +43,15 @@ function appendOnlineData(OnlineData,main){
     know.innerHTML=el.know
     know.setAttribute("class","know")
 
-    let strikethrough_Price=document.createElement("p")
-    strikethrough_Price.innerHTML=el.strikethrough_Price
-    strikethrough_Price.setAttribute("class","strikethrough_Price")
+    // let strikethrough_Price=document.createElement("p")
+    // strikethrough_Price.innerHTML=el.strikethrough_Price
+    // strikethrough_Price.setAttribute("class","strikethrough_Price")
 
     let Price=document.createElement("p")
     Price.innerHTML=el.Price
     Price.setAttribute("class","Price")
-    div2.append(strikethrough_Price,Price)
+    // div2.append(strikethrough_Price,Price)
+    div2.append(Price)
    
     let btn=document.createElement("button")
     btn.innerHTML="ADD TO CART"
@@ -86,8 +84,6 @@ function appendclassroomData(classroomData,train_main){
         let div4=document.createElement("div")
         div4.setAttribute("class","div4")
     
-        
-    
         let image=document.createElement("img")
         image.src=el.images
         image.setAttribute("class","images")
@@ -119,6 +115,7 @@ function appendclassroomData(classroomData,train_main){
         Price.innerHTML=el.Price
         Price.setAttribute("class","Price")
         div2.append(strikethrough_Price,Price)
+        // div2.append(Price)
        
 
         let btn=document.createElement("button")

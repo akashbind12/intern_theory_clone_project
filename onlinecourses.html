@@ -229,26 +229,39 @@
 </html>
 <script type="module">
 
-let OnlineData=[
-    {images:"https://assets.interntheory.com/creative/courses/thumbnails/it.jpg",
-    title:"IT Starter Pack (4 Courses)",description:"Learn the most demanded skills in the IT industry today. Sig ...",
-    strikethrough_Price:"₹ 32999",Price:"₹ 15999",know:"KNOW MORE",emi:"EMI Starting at ₹ 915/month"},
-    {images:"https://assets.interntheory.com/creative/courses/thumbnails/finthumbnail.jpg",title:"Finance Starter Pack (3 Courses)",description:"Learn the most demanded skills in the Finance industry today ...",strikethrough_Price:"₹ 23999",Price:11999,know:"KNOW MORE",emi:"EMI Starting at ₹ 687/month",incart:0},
-    {images:"https://assets.interntheory.com/creative/courses/thumbnails/digital-marketing-course.png",title:"Digital Marketing Course",description:"Learn the art of digital marketing. Sign up for this online ...",strikethrough_Price:"₹ 11999",Price:5999,know:"KNOW MORE",emi:"EMI Starting at ₹ 343/month",incart:0},
-    {images:"https://assets.interntheory.com/creative/courses/thumbnails/stock-market-course.png",title:"Stock Market Course",description:"Learn how to trade and invest in stock markets. Enrol for th ...",strikethrough_Price:"₹ 11999",Price:5999,know:"KNOW MORE",emi:"EMI Starting at ₹ 343/month"},
-    {images:"https://assets.interntheory.com/creative/courses/thumbnails/data-analytics-r-programming-course.png",title:"Data Analytics With R Programming Course",description:"Learn data science online. Join this online data analytics c ...",strikethrough_Price:"₹ 11999",Price:5999,know:"KNOW MORE",emi:"EMI Starting at ₹ 343/month",incart:0},
-    {images:"https://assets.interntheory.com/creative/courses/thumbnails/web-development-course.png",title:"Web Development Course",description:"Learn the art of web design and web development. Join this o ...",strikethrough_Price:"₹ 7999",Price:3999,know:"KNOW MORE",emi:"EMI Starting at ₹ 229/month"},
-    {images:"https://assets.interntheory.com/creative/courses/thumbnails/tally-gst-course.png",title:"Tally + GST Course",description:"Sign up for this online tally and gst course and learn how t ...",strikethrough_Price:"₹ 7999",Price:3999,know:"KNOW MORE",emi:"EMI Starting at ₹ 229/month"},
-    {images:"https://assets.interntheory.com/creative/courses/thumbnails/android-app-development-kotlin-course.png",title:"Android App Development Using Kotlin Course",description:"Learn the art of android app design and web development. Joi ",strikethrough_Price:"₹ 7999",Price:3999,know:"KNOW MORE",emi:"EMI Starting at ₹ 229/month",incart:0},
-    {images:"https://assets.interntheory.com/creative/courses/thumbnails/advanced-excel-course.png",title:"Advanced Excel Course",description:"Master MS Excel. Take the online ms excel course and learn t ...",strikethrough_Price:"₹ 5999",Price:2999,know:"KNOW MORE",emi:"EMI Starting at ₹ 172/month",incart:0},
-    {images:"https://assets.interntheory.com/creative/courses/thumbnails/r-programming-course.png",title:"R Programming Course",description:"Learn r programming online. Sign up for this online r progra ...",strikethrough_Price:"₹ 5999",Price:2999,know:"KNOW MORE",emi:"EMI Starting at ₹ 172/month",incart:0},
-]
+// let OnlineData=[
+//     {images:"https://assets.interntheory.com/creative/courses/thumbnails/it.jpg",
+//     title:"IT Starter Pack (4 Courses)",description:"Learn the most demanded skills in the IT industry today. Sig ...",
+//     strikethrough_Price:"₹ 32999",Price:"₹ 15999",know:"KNOW MORE",emi:"EMI Starting at ₹ 915/month"},
+//     {images:"https://assets.interntheory.com/creative/courses/thumbnails/finthumbnail.jpg",title:"Finance Starter Pack (3 Courses)",description:"Learn the most demanded skills in the Finance industry today ...",strikethrough_Price:"₹ 23999",Price:11999,know:"KNOW MORE",emi:"EMI Starting at ₹ 687/month",incart:0},
+//     {images:"https://assets.interntheory.com/creative/courses/thumbnails/digital-marketing-course.png",title:"Digital Marketing Course",description:"Learn the art of digital marketing. Sign up for this online ...",strikethrough_Price:"₹ 11999",Price:5999,know:"KNOW MORE",emi:"EMI Starting at ₹ 343/month",incart:0},
+//     {images:"https://assets.interntheory.com/creative/courses/thumbnails/stock-market-course.png",title:"Stock Market Course",description:"Learn how to trade and invest in stock markets. Enrol for th ...",strikethrough_Price:"₹ 11999",Price:5999,know:"KNOW MORE",emi:"EMI Starting at ₹ 343/month"},
+//     {images:"https://assets.interntheory.com/creative/courses/thumbnails/data-analytics-r-programming-course.png",title:"Data Analytics With R Programming Course",description:"Learn data science online. Join this online data analytics c ...",strikethrough_Price:"₹ 11999",Price:5999,know:"KNOW MORE",emi:"EMI Starting at ₹ 343/month",incart:0},
+//     {images:"https://assets.interntheory.com/creative/courses/thumbnails/web-development-course.png",title:"Web Development Course",description:"Learn the art of web design and web development. Join this o ...",strikethrough_Price:"₹ 7999",Price:3999,know:"KNOW MORE",emi:"EMI Starting at ₹ 229/month"},
+//     {images:"https://assets.interntheory.com/creative/courses/thumbnails/tally-gst-course.png",title:"Tally + GST Course",description:"Sign up for this online tally and gst course and learn how t ...",strikethrough_Price:"₹ 7999",Price:3999,know:"KNOW MORE",emi:"EMI Starting at ₹ 229/month"},
+//     {images:"https://assets.interntheory.com/creative/courses/thumbnails/android-app-development-kotlin-course.png",title:"Android App Development Using Kotlin Course",description:"Learn the art of android app design and web development. Joi ",strikethrough_Price:"₹ 7999",Price:3999,know:"KNOW MORE",emi:"EMI Starting at ₹ 229/month",incart:0},
+//     {images:"https://assets.interntheory.com/creative/courses/thumbnails/advanced-excel-course.png",title:"Advanced Excel Course",description:"Master MS Excel. Take the online ms excel course and learn t ...",strikethrough_Price:"₹ 5999",Price:2999,know:"KNOW MORE",emi:"EMI Starting at ₹ 172/month",incart:0},
+//     {images:"https://assets.interntheory.com/creative/courses/thumbnails/r-programming-course.png",title:"R Programming Course",description:"Learn r programming online. Sign up for this online r progra ...",strikethrough_Price:"₹ 5999",Price:2999,know:"KNOW MORE",emi:"EMI Starting at ₹ 172/month",incart:0},
+// ]
 let main=document.getElementById("onc_main");
 
 import {appendOnlineData} from "./CourseData.js"
 
-
-let  appenddata=appendOnlineData(OnlineData,main);
+// var data5;
+const fetchonline=async()=>{
+    let url=`https://coursesnewnodejs.herokuapp.com/online`;
+    try{
+         let res=await fetch(url);
+        var OnlineData=await res.json();
+         console.log(OnlineData);
+         appendOnlineData(OnlineData,main);
+         myfunction(OnlineData)
+    }
+    catch(err){
+      console.log(err);
+    }
+  }
+  fetchonline();
 
 
 
@@ -358,6 +371,10 @@ import footer from "./footer.js"
 var foot = document.getElementById("footer_container")
 foot.innerHTML=footer()
 
+
+//--------------------------onlinecourses.js----------------------------
+
+function  myfunction(OnlineData){
 let carts=document.querySelectorAll(".btn")
 
 
@@ -447,4 +464,5 @@ if(cartCost!=null){
 }
 
     onLoadCartNo()
+}
 </script>

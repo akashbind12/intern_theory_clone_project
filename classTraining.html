@@ -236,22 +236,24 @@
 
 let main=document.getElementById("train_main");
 
-import {appendclassroomData} from "./CourseData.js"
 
+import {appendclassroomData} from "./CourseData.js"
+// var data5;
 const fetchclassroom=async()=>{
-    let url=`https://coursesnewnodejs.herokuapp.com/classroom`
+    let url=`https://coursesnewnodejs.herokuapp.com/classroom`;
     try{
-         var res=await fetch(url)
-         var data=await res.json();
-         appendclassroomData(data)
-         console.log(data)
+         let res=await fetch(url);
+        var classroomData=await res.json();
+        //  console.log(classroomData);
+         appendclassroomData(classroomData,main);
+         myfunction(classroomData);
     }
     catch(err){
-      console.log(err)
+      console.log(err);
     }
   }
-  fetchclassroom()
-let  appenddata=appendclassroomData(classroomData,main);
+  fetchclassroom();
+// let  appenddata=appendclassroomData(data5,main);
 
 
 //  -----------------------navbar.js---------------------
@@ -357,7 +359,8 @@ import footer from "./footer.js"
 var foot = document.getElementById("footer_container")
 foot.innerHTML=footer()
 
-
+//---------------------classtraining.js--------------------------
+function myfunction(classroomData){
 let carts=document.querySelectorAll(".btn")
 
 
@@ -447,7 +450,7 @@ function setItems(classroomData){
     }
 
     onLoadCartNo()
-    
+}
 </script>
 
 
