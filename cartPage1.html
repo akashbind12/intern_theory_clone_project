@@ -490,10 +490,13 @@ import navBar from "./component/navBar.js"
 
 //  <!-- ---------------footer.js-------------------- --> 
 
-import footer from "./footer.js"
+import footer from "./component/footer.js"    
 
 var foot = document.getElementById("footer_container")
 foot.innerHTML=footer()
+
+
+//  <!-- ---------------cartpage.js-------------------- --> 
 
 document.getElementById("checkout").addEventListener("click",function(){
         document.getElementById("payment_final").style.display = "flex";
