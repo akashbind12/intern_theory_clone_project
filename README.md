@@ -24,7 +24,7 @@
 ### Cart Page By [@SudhirPC](https://github.com/SudhirPC)
 ![Screenshot (124)](https://user-images.githubusercontent.com/97519781/165341959-38a44944-0d34-4245-9144-a8b36f768ced.png)
 
-### Payment Page By [@akashbind12](https://github.com/akashbind12)
+### Payment Modal By [@akashbind12](https://github.com/akashbind12)
 ![Screenshot (125)](https://user-images.githubusercontent.com/97519781/165342073-6ea248e0-0302-48b2-aa1b-69885f3d3ab9.png)
 
 ### Contact Page By [@shrawaninilange](https://github.com/shrawaninilange)
