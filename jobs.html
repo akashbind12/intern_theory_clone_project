@@ -388,130 +388,24 @@ border-radius: 5px;
 
 // --------internship.js-------------------------------------------
 
+        // -------------api fetch--------------------------------------
+     async function fetchAPI(){
+            try{
 
-     let job_data = [
-         {
-             img : "https://assets.interntheory.com/uploads/company/logos/3cdd6cced1a455d7623c5319436acdcf3408009b.jpg",
-             title : "Business Development Job",
-             name : "Finbricks",
-             time : "Full Time Internship",
-             industry : "Real Estate",
-             city : "Mumbai",
-             Stipend: "Stipend: 10000 - 12000 per month",
-             weeks : "1 week"   
-         },
-         {
-             img : "https://assets.interntheory.com/uploads/company/logos/bdc2fb3214ab03616ab475fe2f360cb8b837aa87.jpg",
-             title : "Marketing Job",
-             name : "Think and Learn Pvt Ltd",
-             time : "Part Time Internship",
-             industry : "Marketing",
-             city : "Ahmedabad",
-             Stipend: "Stipend: 18000 per month",
-             weeks : "4 weeks left"   
-         },
-         {
-             img : "https://assets.interntheory.com/uploads/company/companylogos/62362fbf882221470f099d8d0a119df93ce19831/7e34b7356b30b3696d14fcab94c6e8989a42fd69com.jpg",
-             title : "Marketing Ambassador - Work from Home",
-             name : "Laugh Out Loud Ventures",
-             time : "Work From Home Internship",
-             industry : "Marketing",
-             city : "Delhi",
-             Stipend: "Stipend: 3000 - 10000 per month",
-             weeks : "4 weeks left"   
-         },
-         {
-             img : "https://assets.interntheory.com/uploads/company/companylogos/5b17adc969018b102b802193f65ffebc07494a2c/7c483889017d4bef536927bf5820941e35f05657com.jpeg",
-             title : "Search Engine Optimisation",
-             name : "Sizzling Career Solutions Pvt Ltd.",
-             time : "Full Time Internship",
-             industry : "SEO",
-             city : "Mumbai",
-             Stipend: "Stipend: 5000 - 10000 per month",
-             weeks : "4 weeks left"   
-         },
-         {
-             img : "https://assets.interntheory.com/uploads/company/companylogos/e659b3b149dd5355940bc7ff40dbee2f0f53b22a/2cdd8e5a8b7f7a140f8711f385755340c64b76d5com.jpg",
-             title : "Talent Acquisition, HR Recruiter",
-             name : "Nimbus Logistics",
-             time : "Full Time Internship",
-             industry : "Human Resources",
-             city : "Bangalore",
-             Stipend: "Stipend: 3000 - 5000 per month",
-             weeks : "3 weeks left"   
-         },
-         {
-             img : "https://assets.interntheory.com/uploads/company/companylogos/e659b3b149dd5355940bc7ff40dbee2f0f53b22a/2cdd8e5a8b7f7a140f8711f385755340c64b76d5com.jpg",
-             title : "Business strategy",
-             name : "Magic factory",
-             time : "Work From Home Internship",
-             industry : "General Management",
-             city : "Bangalore",
-             Stipend: "Stipend: 7000 - 10000 per month",
-             weeks : "3 weeks left"   
-         },
-         {
-             img : "https://assets.interntheory.com/uploads/company/companylogos/768136d410e350e1646ec0f32e49544d7fb4ce73/d937822d046b705e8aa58936809171cd709d2cb3com.jpg",
-             title : "Intern",
-             name : "ABC Consultants",
-             time : "Full Time Internship",
-             industry : "Human Resources",
-             city : "Delhi",
-             Stipend: "Stipend: 6000 per month",
-             weeks : "3 weeks left"   
-         },
-         {
-             img : "https://assets.interntheory.com/uploads/company/logos/40d8069a92d3926dbf328356fe32d4d9f12f870e.jpg",
-             title : "Content Writer",
-             name : "Instaastro Technology Pvt. Ltd.",
-             time : "Part Time Internship",
-             industry : "Content Writing",
-             city : "Ahmedabad",
-             Stipend: "Stipend: 5000 per month",
-             weeks : "3 weeks left"   
-         },
-         {
-             img : "https://assets.interntheory.com/uploads/company/logos/76a0ec84f95f4b7a450d53b5953bdf17802f62ce.jpg",
-             title : "Business Development",
-             name : "Oddy Labs",
-             time : "Part Time Internship",
-             industry : "Business Development",
-             city : "Ahmedabad",
-             Stipend: "Stipend: 4000 per month",
-             weeks : "3 weeks left"   
-         },
-         {
-             img : "https://assets.interntheory.com/uploads/company/logos/76a0ec84f95f4b7a450d53b5953bdf17802f62ce.jpg",
-             title : "Blog writer job",
-             name : "Oddy Labs",
-             time : "Work From Home Internship",
-             industry : "Content Writing",
-             city : "Mumbai",
-             Stipend: "Stipend: 4000 per month",
-             weeks : "3 weeks left"   
-         },
-     ]
-      
-     // -------------api fetch--------------------------------------
-    //  async function fetchAPI(){
-    //         try{
+                let res = await fetch(`https://interntheory-new.herokuapp.com/job`);
+                let job_data = await res.json();
 
-    //             let res = await fetch(`http://localhost:5000/job`);
-    //             let job_data = await res.json();
+                console.log(job_data);
+                displaydata(job_data);
 
-    //             console.log(job_data);
-    //             displaydata(job_data);
+            }catch(err){
+                console.log(err);
+            }
+        }
 
-    //         }catch(err){
-    //             console.log(err);
-    //         }
-    //     }
-
-    // fetchAPI();
-
+    fetchAPI();
 
     // -------------------------job type filter-------------------------------------
-
 
     document.querySelector("#work_type").addEventListener("click",filter_work)
 
@@ -525,31 +419,30 @@ border-radius: 5px;
        }
 
  //---------------------------------------------------------------------------------
-        // fetchAPI3();
+        fetchAPI3();
 
-        // async function fetchAPI3(){
-        // try{
+        async function fetchAPI3(){
+        try{
 
-        //     let res3 = await fetch(`http://localhost:5000/job/user/${selected_work}`);
-        //     let filterlist_work = await res3.json();
+            let res3 = await fetch(`https://interntheory-new.herokuapp.com/job/user/${selected_work}`);
+            let filterlist_work = await res3.json();
 
-        //     console.log(filterlist_work);
-        //     displaydata(filterlist_work);
+            console.log(filterlist_work);
+            displaydata(filterlist_work);
 
-        // }catch(err){
-        //     console.log(err);
-        // }
-        // }
+        }catch(err){
+            console.log(err);
+        }
+        }
 //---------------------------------------------------------------------------------------
 
-       var filterlist_work =  job_data.filter(function(elem){
-         return elem.time == selected_work;
-       })
-       console.log(filterlist_work);
-       displaydata(filterlist_work);
+    //    var filterlist_work =  job_data.filter(function(elem){
+    //      return elem.time == selected_work;
+    //    })
+    //    console.log(filterlist_work);
+    //    displaydata(filterlist_work);
    }
      
-
     // -------------------------job city filter-------------------------------------
 
      document.querySelector("#city").addEventListener("click",filtercity)
@@ -564,35 +457,33 @@ border-radius: 5px;
        }
 
 //---------------------------------------------------------------------------------
-        // fetchAPI2();
+        fetchAPI2();
 
-        // async function fetchAPI2(){
-        // try{
+        async function fetchAPI2(){
+        try{
 
-        //     let res2 = await fetch(`http://localhost:5000/job/${selected_city}`);
-        //     let filterlist = await res2.json();
+            let res2 = await fetch(`https://interntheory-new.herokuapp.com/job/${selected_city}`);
+            let filterlist = await res2.json();
 
-        //     console.log(filterlist);
-        //     displaydata(filterlist);
+            console.log(filterlist);
+            displaydata(filterlist);
 
-        // }catch(err){
-        //     console.log(err);
-        // }
-        // }
+        }catch(err){
+            console.log(err);
+        }
+        }
 
 //---------------------------------------------------------------------------------------
 
-       var filterlist =  job_data.filter(function(elem){
-         return elem.city == selected_city;
-       })
-       console.log(filterlist);
-       displaydata(filterlist);
+    //    var filterlist =  job_data.filter(function(elem){
+    //      return elem.city == selected_city;
+    //    })
+    //    console.log(filterlist);
+    //    displaydata(filterlist);
    }
 
-     
-
 // -------------------------append data----------------------------------------------------------
-      displaydata(job_data);
+    //   displaydata(job_data);
 
 
      function displaydata(job_data){
