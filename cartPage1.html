@@ -137,9 +137,13 @@ color: white;
     color: #5DADE2 ;
     border: 1px solid #5DADE2 ;
     border-radius: 4px;
+    cursor: pointer;
     }
     #payvia>div:hover{
     background-color: #D6EAF8 ;
+    }
+    #close{
+        background-color: #D6EAF8 ; 
     }
 
     #payment-content{
@@ -148,6 +152,10 @@ color: white;
         background-color: white;
         padding: 30px;
         border-radius: 4px;
+    }
+    .otp-input:focus{
+        outline: none;
+        text-align: center;
     }
     /* -------------------------footer------------ */
     #footer_container{
@@ -262,7 +270,7 @@ color: white;
         <div id="payment-content">
             <h1>Pay Via</h1>
             <div id="payvia">
-                <div id="close">CREDIT CARD</div>
+                <div id="close" >CREDIT CARD</div>
         
                 <div>DEBIT CARD</div>
                 <div>NET BANKING</div>
@@ -316,10 +324,9 @@ color: white;
                 <div id="method">
                     <p>CARDS,UPI & MORE</p>
                 </div>
-                <div class="card" id="UPI">
-               <div><i style="font-size: 18px; color: #D32F2F;" class="fa-solid fa-credit-card"></i></div>
-                    <p>Cards</p>
-                    
+                <div class="card" id="UPI" style="font-size: 18px; color: #D32F2F; border: 1px solid red;" >
+               <div ><i style="font-size: 18px; color: #D32F2F; border: 1px solid red;" class="fa-solid fa-credit-card"></i></div>
+                    <p>Cards</p>     
                 </div>
                 <div id="UPI">
                     <div><i  style="font-size: 18px; color: #D32F2F;" class="fa-solid fa-angles-right"></i></div>
@@ -371,7 +378,7 @@ color: white;
                     <p>Enter OTP sent to</p>
                     <p>+917039746800 to access</p>
                     <p>Saved Cards</p>
-                    <input type="zipcode">
+                    <input class="otp-input" type="zipcode">
                 </div>
                 <div>
                     <p>Resend OTP</p>
