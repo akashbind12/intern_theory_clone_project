@@ -25,7 +25,9 @@
 ![Screenshot (124)](https://user-images.githubusercontent.com/97519781/165341959-38a44944-0d34-4245-9144-a8b36f768ced.png)
 
 ### Payment Modal By [@akashbind12](https://github.com/akashbind12)
+![Screenshot (307)](https://user-images.githubusercontent.com/97519781/188281111-b37d3e14-6ad4-4104-adf9-8ec9fba371b5.png)
 ![Screenshot (125)](https://user-images.githubusercontent.com/97519781/165342073-6ea248e0-0302-48b2-aa1b-69885f3d3ab9.png)
+![Screenshot (309)](https://user-images.githubusercontent.com/97519781/188281114-6348a9fc-c761-45d0-99b8-c181a8b6b0c8.png)
 
 ### Contact Page By [@shrawaninilange](https://github.com/shrawaninilange)
 ![Screenshot (123)](https://user-images.githubusercontent.com/97519781/165341640-ec4f72d9-8fc9-4faf-ab15-852276e03c68.png)
