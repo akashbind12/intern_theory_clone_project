@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const onlineSchema = new mongoose.Schema(
+const classroomSchema = new mongoose.Schema(
   {
     images: { type: String, required: true },
     title: { type: String, required: true },
@@ -17,5 +17,4 @@ const onlineSchema = new mongoose.Schema(
   },
 )
 
-module.exports = mongoose.model('online', onlineSchema)
-
+module.exports = mongoose.model('classroom', classroomSchema)

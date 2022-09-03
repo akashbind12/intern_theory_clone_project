@@ -20,14 +20,3 @@ const internshipSchema = new mongoose.Schema(
 
 
  module.exports = mongoose.model("internship", internshipSchema);
-
-//  {
-//     img : "https://assets.interntheory.com/uploads/company/logos/3cdd6cced1a455d7623c5319436acdcf3408009b.jpg",
-//     title : "Business Development Intern",
-//     name : "Finbricks",
-//     time : "Full Time Internship",
-//     industry : "Real Estate",
-//     city : "Mumbai",
-//     Stipend: "Stipend: 10000 - 12000 per month",
-//     weeks : "1 week"   
-// },

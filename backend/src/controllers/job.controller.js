@@ -24,11 +24,11 @@ const router = express.Router();
     }
   });
 
-  router.get("/:name", async (req, res) => {
+  router.get("/:city", async (req, res) => {
     try {
     //   const comment = await Internship.findById(req.params.id).lean().exec();
 
-      const jobCity = await Job.find({"city" :{$eq : req.params.name}}).lean().exec();
+      const jobCity = await Job.find(req.params).lean().exec();
     //   db.movie.find({"movie_name" :{$eq : "Me and Orson Welles"}}).pretty()
   
       return res.status(201).send(jobCity);
@@ -37,10 +37,10 @@ const router = express.Router();
     }
   });
 
-  router.get("/user/:type", async (req, res) => {
+  router.get("/user/:time", async (req, res) => {
     try {
 
-      const jobType = await Job.find({"time" :{$eq : req.params.type}}).lean().exec();
+      const jobType = await Job.find(req.params).lean().exec();
     //   db.movie.find({"movie_name" :{$eq : "Me and Orson Welles"}}).pretty()
 
       return res.status(201).send(jobType);
