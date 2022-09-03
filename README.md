@@ -1,4 +1,4 @@
-# [Interntheory](intern-theory-clone-project.vercel.app)
+# [Interntheory.com](intern-theory-clone-project.vercel.app)
 
 <table>
 <tr>
@@ -7,7 +7,7 @@
 </tr>
 </table>
 
-## [Interntheory Clone](intern-theory-clone-project.vercel.app)
+## [interntheory.com Clone](intern-theory-clone-project.vercel.app)
 
 ### Login Page By [@shivadatta9890](https://github.com/shivadatta9890)
 ![Screenshot (119)](https://user-images.githubusercontent.com/97519781/165341234-6298513e-e587-490a-a936-25ec4776e657.png)
