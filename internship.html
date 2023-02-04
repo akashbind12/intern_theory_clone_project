@@ -394,7 +394,7 @@ import navBar from "./component/navBar.js"
     async function fetchAPI(){
         try{
 
-            let res = await fetch(`https://interntheory-new.herokuapp.com/internship`);
+            let res = await fetch(`https://interntheory-backend.onrender.com/internship`);
             let Internships_data = await res.json();
 
             console.log(Internships_data);
@@ -427,7 +427,7 @@ import navBar from "./component/navBar.js"
         async function fetchAPI3(){
         try{
 
-            let res3 = await fetch(`https://interntheory-new.herokuapp.com/internship/user/${selected_work}`);
+            let res3 = await fetch(`https://interntheory-backend.onrender.com/internship/user/${selected_work}`);
             let filterlist_work = await res3.json();
 
             console.log(filterlist_work);
@@ -465,7 +465,7 @@ import navBar from "./component/navBar.js"
         async function fetchAPI2(){
         try{
 
-            let res2 = await fetch(`https://interntheory-new.herokuapp.com/internship/${selected_city}`);
+            let res2 = await fetch(`https://interntheory-backend.onrender.com/internship/${selected_city}`);
             let filterlist = await res2.json();
 
             console.log(filterlist);

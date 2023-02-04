@@ -392,7 +392,7 @@ border-radius: 5px;
      async function fetchAPI(){
             try{
 
-                let res = await fetch(`https://interntheory-new.herokuapp.com/job`);
+                let res = await fetch(`https://interntheory-backend.onrender.com/job`);
                 let job_data = await res.json();
 
                 console.log(job_data);
@@ -424,7 +424,7 @@ border-radius: 5px;
         async function fetchAPI3(){
         try{
 
-            let res3 = await fetch(`https://interntheory-new.herokuapp.com/job/user/${selected_work}`);
+            let res3 = await fetch(`https://interntheory-backend.onrender.com/job/user/${selected_work}`);
             let filterlist_work = await res3.json();
 
             console.log(filterlist_work);
@@ -462,7 +462,7 @@ border-radius: 5px;
         async function fetchAPI2(){
         try{
 
-            let res2 = await fetch(`https://interntheory-new.herokuapp.com/job/${selected_city}`);
+            let res2 = await fetch(`https://interntheory-backend.onrender.com/job/${selected_city}`);
             let filterlist = await res2.json();
 
             console.log(filterlist);
